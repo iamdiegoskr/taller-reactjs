@@ -17,3 +17,8 @@
 .btn-register:hover{
     background: #bb5d05;
 }
+
+
+.error{
+    color: red;
+}
