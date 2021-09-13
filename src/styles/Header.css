@@ -1,0 +1,13 @@
+header{
+    background: #140254;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+header p{
+    font-size: 1.8em;
+    letter-spacing: 1.2px;
+}

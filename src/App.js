@@ -1,11 +1,16 @@
 import UserForm from './components/User';
+
+import Header from './components/Header'
+
 import './styles/App.css'
 
 function App() {
   return (
     <div className="App">
-        <h1>Proyecto hecho por Juan Diego y Yamson</h1>
-        <UserForm/>
+        <Header/>
+        <div className="main">
+          <UserForm/>
+        </div>
     </div>
   );
 }
