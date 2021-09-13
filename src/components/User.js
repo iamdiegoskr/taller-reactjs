@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import TableUsers from './TableUsers'
 import '../styles/User.css'
 
 function UserForm() {
@@ -41,29 +42,37 @@ function UserForm() {
 
         users.descripcion = description;
 
-        listUsers.push(users);
+        setlistUsers(listUsers => [...listUsers, users]);
 
-        console.log(listUsers)
-        //setlistUsers(listUsers => [...listUsers, users]);
+        clear(event.target)
+    }
+
+    function clear(event){
+        event.reset();
     }
 
     return (
-        <form className="user-section"  onSubmit={enviarDatos}>
-            <input type="text" className="user" placeholder="Ingrese su nombre"
-                    onChange={handleInputChange} name="nombre" required /> <br/>
+        <div>
 
-            <input type="number" min="0" max="200" className="user-age" placeholder="Ingrese su edad"
-                    onChange={handleInputChange} name="edad" required /><br/>
+            <form className="user-section"  onSubmit={enviarDatos}>
+                <input type="text" className="user" placeholder="Ingrese su nombre"
+                        onChange={handleInputChange} name="nombre" required /> <br/>
 
-            <select name="ocupacion" id="ocupacion" onChange={handleInputChange}>
-                {/* <option selected="true" disabled="disabled">Seleccion ocupacion</option> */}
-                <option value="estudiante">Estudiante</option>
-                <option value="empleado">Empleado</option>
-                <option value="jubilado">Jubilado</option>
-            </select><br/>
+                <input type="number" min="0" max="200" className="user-age" placeholder="Ingrese su edad"
+                        onChange={handleInputChange} name="edad" required /><br/>
 
-            <button type="submit" className="btn-register" >Registrarse</button>
-        </form>
+                <select name="ocupacion" id="ocupacion" onChange={handleInputChange}>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="empleado">Empleado</option>
+                    <option value="jubilado">Jubilado</option>
+                </select><br/>
+
+                <button type="submit" className="btn-register" >Registrarse</button>
+            </form>
+
+            <hr/>
+            <TableUsers infoUsers={listUsers}/>
+        </div>
 
     );
 }
