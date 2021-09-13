@@ -16,6 +16,7 @@ function TableUsers(props) {
                             <th>Edad</th>
                             <th>Ocupacion</th>
                             <th>Descripcion</th>
+                            <th>Categoria</th>
                         </tr>
                     </thead>
                     <tbody>
