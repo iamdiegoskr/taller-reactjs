@@ -49,7 +49,7 @@ function UserForm() {
         }else if(edad<=30){
             return `Al Joven ${nombre} de ${edad} años,le recomendamos tener presente el compromiso, el esfuerzo y el respeto como principales valores para obtener un buen resultado como ${ocupacion}`
         }else if(edad<=50){
-            return `Al Adulto ${nombre} de ${edad} años, le recomendamos tener presente la paciencia como ${ocupacion}`
+            return `Al Adulto ${nombre} de ${edad} años, le recomendamos tener presente la generosidad, el servir a los demas y el equilibro  como ${ocupacion}`
         }else{
             return `Al Mayor ${nombre} de ${edad} años, le recomendamos compartir sus experiencias vividas con los demas, enseñando lo aprendido y disfrutando como nunca de la vida`
         }
